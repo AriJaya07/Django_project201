@@ -78,13 +78,14 @@ $(document).on("click", ".js-toggle-modal", function(e) {
                 console.log("DEBUG", "unfollow")
                 $(this).attr("data-action", "unfollow")
             } else {
-                // The opposite
+                // the opposite
                 console.log("DEBUG", "follow")
                 $(this).attr("data-action", "follow")
             }
         },
         error: (error) => {
             console.warn(error)
+            $btn.prop("disabled", false).text("Error");
         }
     });
 })
